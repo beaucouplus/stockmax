@@ -10,6 +10,11 @@ class DeliveriesController < ApplicationController
     render json: @deliveries
   end
 
+  def show
+    @delivery = Delivery.find(params[:id])
+    render json: @delivery
+  end
+
   private
 
   def delivery_params
